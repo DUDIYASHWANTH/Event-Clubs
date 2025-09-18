@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>College Event & Club Hub</title>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+
+</head>
+
+<body>
+
+    <header>
+        <h1 style="color:whitesmoke">Samskruti Clubs</h1>
+        <nav>
+            <a href="clubs.html" style="color:whitesmoke;">Clubs</a>
+            <a href="events.html" style="color:whitesmoke;">Events</a>
+            <a href="contact.html" style="color:whitesmoke;">Contact</a>
+            <a href="registration.html" style="color:whitesmoke;">Register</a>
+        </nav>
+
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Welcome to Campus Life</h2>
+            <p><span id="typed-text">clubs, join events, and build your network</span></p>
+        </div>
+    </section>
+
+    <section id="clubs" class="section">
+        <h2 style="color: rgb(173, 186, 253);">Student Clubs</h2>
+        <div class="grid">
+            <div class="card">
+                <h3><i class="fas fa-code"></i> Tech Club</h3>
+                <p>Weekly coding sessions, hackathons, and tech talks.</p>
+            </div>
+            <div class="card">
+                <h3><i class="fas fa-theater-masks"></i> Drama Society</h3>
+                <p>Acting workshops, performances, and improvisation nights.</p>
+            </div>
+            <div class="card">
+                <h3><i class="fas fa-book"></i> Literary Club</h3>
+                <p>Creative writing, poetry recitals, and debates.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="events" class="section">
+        <h2 style="color: rgb(173, 186, 253);;">Upcoming Events</h2>
+        <div class="filter">
+            <button onclick="filterEvents('all')">All</button>
+            <button onclick="filterEvents('tech')">Tech</button>
+            <button onclick="filterEvents('culture')">Culture</button>
+        </div>
+        <div class="grid" id="event-list">
+            <div class="card event" data-category="tech"
+                onclick="openModal('Hackathon 2025', '24-hour AI Hackathon, Oct 10-11.')">
+                <h3>Hackathon 2025</h3>
+                <p>Oct 10, 2025 - AI Challenge</p>
+            </div>
+            <div class="card event" data-category="culture"
+                onclick="openModal('Drama Night', 'Live performances from the Drama Society.')">
+                <h3>Drama Night</h3>
+                <p>Oct 12, 2025 - Main Auditorium</p>
+            </div>
+            <div class="card event" data-category="tech"
+                onclick="openModal('AI Workshop', 'Hands-on AI development workshop.')">
+                <h3>AI Workshop</h3>
+                <p>Oct 15, 2025 - Innovation Lab</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section">
+        <h2 style="color:rgb(173, 186, 253);;">Contact Us</h2>
+        <form id="contact-form">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+            <p id="form-msg"></p>
+        </form>
+    </section>
+
+    <div class="modal" id="eventModal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h3 id="modalTitle"></h3>
+            <p id="modalDescription"></p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 College Event & Club Hub</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+</body>
+
+</html>

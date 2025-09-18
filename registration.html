@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Register - College Hub</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body>
+
+<header>
+  <h1>College Event & Club Hub</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="clubs.html">Clubs</a>
+    <a href="events.html">Events</a>
+    <a href="contact.html">Contact</a>
+    <a href="registration.html">Register</a>
+  </nav>
+</header>
+
+<section class="section">
+  <h2>Register for Events & Clubs</h2>
+  <form id="registration-form">
+    <input type="text" placeholder="Full Name" required />
+    <input type="email" placeholder="Email Address" required />
+    <input type="text" placeholder="Student ID / Roll Number" required />
+
+    <label>Select Type:</label>
+    <select required>
+      <option value="" disabled selected>Choose one</option>
+      <option value="event">Event</option>
+      <option value="club">Club</option>
+      <option value="both">Both</option>
+    </select>
+
+    <textarea placeholder="Why are you interested? (optional)"></textarea>
+    <button type="submit">Submit Registration</button>
+  </form>
+</section>
+
+<footer>
+  &copy; 2025 College Event & Club Hub
+</footer>
+
+<script>
+  document.getElementById("registration-form").addEventListener("submit", function(e) {
+    e.preventDefault();
+    alert("Thank you! Your registration has been submitted.");
+    // You can connect this with backend POST later
+    this.reset();
+  });
+</script>
+
+</body>
+</html>
